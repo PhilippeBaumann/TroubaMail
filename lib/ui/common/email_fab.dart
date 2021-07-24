@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dart:ui' as ui;
+
 class EmailFAB extends StatelessWidget {
   const EmailFAB({
     Key key,
@@ -38,32 +40,28 @@ class EmailFAB extends StatelessWidget {
 class FloatingPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint amberPaint = Paint()
-      ..color = Colors.amber
-      ..strokeWidth = 5;
 
-    Paint greenPaint = Paint()
-      ..color = Colors.green
-      ..strokeWidth = 5;
+    Paint troubaPaint = Paint()
+      ..strokeWidth = 5
+      ..shader = ui.Gradient.linear(
+          Offset(size.width * 0.27, size.height * 0.5),
+          Offset(size.width - (size.width * 0.27), size.height * 0.5),
+        [
+          Colors.blue,
+          Colors.red,
+        ],
+      );
 
-    Paint bluePaint = Paint()
-      ..color = Colors.blue
-      ..strokeWidth = 5;
-
-    Paint redPaint = Paint()
-      ..color = Colors.red
-      ..strokeWidth = 5;
 
     canvas.drawLine(Offset(size.width * 0.27, size.height * 0.5),
-        Offset(size.width * 0.5, size.height * 0.5), amberPaint);
+        Offset(size.width * 0.5, size.height * 0.5), troubaPaint);
     canvas.drawLine(
         Offset(size.width * 0.5, size.height * 0.5),
-        Offset(size.width * 0.5, size.height - (size.height * 0.27)),
-        greenPaint);
+        Offset(size.width * 0.5, size.height - (size.height * 0.27)), troubaPaint );
     canvas.drawLine(Offset(size.width * 0.5, size.height * 0.5),
-        Offset(size.width - (size.width * 0.27), size.height * 0.5), bluePaint);
+        Offset(size.width - (size.width * 0.27), size.height * 0.5), troubaPaint);
     canvas.drawLine(Offset(size.width * 0.5, size.height * 0.5),
-        Offset(size.width * 0.5, size.height * 0.27), redPaint);
+        Offset(size.width * 0.5, size.height * 0.27), troubaPaint);
   }
 
   @override

@@ -35,14 +35,14 @@ class EmailListTile extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     item?.title ?? "",
-                    style: Theme.of(context).textTheme.display1.copyWith(
+                    style: Theme.of(context).textTheme.headline4.copyWith(
                           fontSize: 16.0,
                         ),
                   ),
                   Text(
                     item?.description ?? "",
                     maxLines: 3,
-                    style: Theme.of(context).textTheme.body1.copyWith(
+                    style: Theme.of(context).textTheme.bodyText2.copyWith(
                           fontSize: 16.0,
                           color: Colors.grey,
                         ),

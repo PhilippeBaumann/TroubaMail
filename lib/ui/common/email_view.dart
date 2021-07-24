@@ -53,7 +53,7 @@ class _EmailViewState extends State<EmailView> {
                 child: Text(
                   widget.item?.title ?? "",
                   maxLines: 2,
-                  style: Theme.of(context).textTheme.title,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
               ),
               IconButton(

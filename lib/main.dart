@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Gmail Clone',
+      title: 'Trouba Mail Client',
       theme: ThemeData(
         primaryColor: Colors.white,
         accentColor: Colors.black
